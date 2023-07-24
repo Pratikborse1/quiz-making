@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Quiz App</title>
+</head>
+
+<body>
+  <!-- main  page creation -->
+
+  <div id="mainPage">
+    <div id="welcome_section">
+      <div class="logo">
+        <img src="testbook logo.png" alt="logo-img" />
+      </div>
+
+      <div class="heading">
+        <h2 class="heading_style">Welcome to the Mind Quiz App</h2>
+        <h3>Enter your name to continue the quiz.</h3>
+      </div>
+
+
+      <div class="user_info">
+        <input type="text" class="input_value" name="value" required placeholder="Enter Your Name" autocomplete="off" />
+        <button type="button" class="enter_btn" onclick="printname()"> Enter </button>
+      </div>
+
+
+      <div class="message_area">
+        <h4>
+          <div id="user_message"></div>
+          You'll have 10 seconds to answer each question.
+        </h4>
+        <h2 class="heading_style">Select Category</h2>
+      </div>
+
+
+      <!-- category button for each category -->
+      <div class="category_section">
+        <div class="category_button">
+          <button type="button" class="questionsCategory" data-category="probability"> Probability
+
+          </button>
+          <button type="button" class="questionsCategory" data-category="Pipes and Cisterns"> Pipes and
+            Cisterns</button>
+          <button type="button" class="questionsCategory" data-category="Problems On Age"> Problems On Age </button>
+          <button type="button" class="questionsCategory" data-category="Profit And Loss"> Profit And Loss </button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- main page end -->
+
+
+  <!-- question box start -->
+  <div id="question_box">
+    <div id="wish">
+      <h2>Give Your Best : <span id="wish_name" class="name"></span></h2>
+    </div>
+
+    <img id="inside_logo" src="testbook logo.png" alt="logo-img" />
+
+    <h1 class="selected_category"><span id="categoryName"></span></h1>
+    <div class="score_timer">
+      <div id="timer">0:00</div>
+      <div id="score">Score:</div>
+    </div>
+
+
+    <fieldset>
+      <legend class="question_count"></legend>
+      <div class="questions"></div>
+    </fieldset>
+
+
+    <div class="answer_option">
+      <button type="button" class="option">1</button>
+      <button type="button" class="option">2</button>
+      <button type="button" class="option">3</button>
+      <button type="button" class="option">4</button>
+    </div>
+    <div class="next_btn">
+      <button type="button" id="next" class="next_question_btn"> Next Question </button>
+      <button type="button" id="rsltbtn" class="see_result_btn" onclick="showResult()"> See Your Result </button>
+    </div>
+  </div>
+  <!--  question  box end-->
+
+
+
+
+
+
+  <!--  result box start-->
+  <div id="result_box">
+    <div class="users_result">
+      <h2>Quiz Result</h2>
+      <p class="resultPage"> <span class="name" id="user_name">user name shows here</span>Your Result Is : </p>
+      <p class="resultPage" id="total_time_taken"> </p>
+      <p class="resultPage" id="total_questions"> Total Question : 10 </p>
+      <p class="resultPage" id="attempted_questions"> Attempt : 10 </p>
+      <p class="resultPage" id="correct_answers"></p>
+      <p class="resultPage" id="wrong_answers"></p>
+      <p class="resultPage" id="result_in_percent"></p>
+    </div>
+    <div class="last_btn">
+      <button class="restart">Start Again</button>
+      <button class="homePage">Go To Home</button>
+    </div>
+  </div>
+  <!--  result box end-->
+
+
+  <!-- Adding External Javascript -->
+  <script src="allQuestion.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
